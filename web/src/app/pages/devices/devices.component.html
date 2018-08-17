@@ -1,0 +1,28 @@
+<nb-card class="page-wrapper">
+  <nb-card-header>
+    DEVICES
+    <hr>
+    <button (click)="addDevice()" nbButton size="small" fullWidth status="primary">ADD DEVICE</button>
+  </nb-card-header>
+  <nb-card-body>
+    <div class="row flex-row flex-nowrap">
+      <div *ngFor="let device of devices; let i = index" class="col-4">
+        <nb-card>
+          <nb-card-header class="text-uppercase">
+            <a [routerLink]="['/devices',device.id ]"> {{ device.name }} </a>
+            <button *ngIf="device.status == true " (click)="offDevice(device.id,i)" class="badge badge-success float-right">ONLINE</button>
+            <button *ngIf="device.status == false " (click)="onDevice(device.id,i)" class="badge badge-danger float-right">OFFLINE</button>
+          </nb-card-header>
+          <nb-card-body>
+            <dl>
+              <dt>MOBILE NUMBER</dt>
+              <dd>{{ device.mobile_no }}</dd>
+              <dt>MESSAGE SENT</dt>
+              <dt>{{ device.message_sent }}</dt>
+            </dl>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>

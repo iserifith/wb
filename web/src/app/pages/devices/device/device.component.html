@@ -1,0 +1,19 @@
+<nb-card class="page-wrapper" [nbSpinner]="loading" nbSpinnerStatus="danger">
+  <nb-card-body>
+    <nb-card *ngIf="device !== undefined">
+      <nb-card-header class="text-uppercase">
+        {{ device.name }}
+        <button (click)="onDevice()" class="badge badge-success float-right">Initialize Device</button>
+        <button (click)="deviceState()" class="badge badge-success float-right">Device State</button>
+      </nb-card-header>
+      <nb-card-body>
+        <dl>
+          <dt>MOBILE NUMBER</dt>
+          <dd>{{ device.mobile_no }}</dd>
+          <dt>MESSAGE SENT</dt>
+          <dt>{{ device.message_sent }}</dt>
+        </dl>
+      </nb-card-body>
+    </nb-card>
+  </nb-card-body>
+</nb-card>

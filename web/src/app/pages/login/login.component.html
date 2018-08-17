@@ -1,0 +1,21 @@
+<nb-layout>
+  <nb-layout-column>
+    <div class="d-flex justify-content-center">
+      <nb-card>
+        <nb-card-body>
+          <button (click)="googleLogin()" nbButton hero status="danger" fullWidth>
+            <span class="fa fa-lg fa-google"></span>
+            Sign in with Google
+          </button>
+        </nb-card-body>
+        <nb-card-body>
+          <button (click)="facebookLogin()" nbButton hero status="info" fullWidth>
+            <span class="fa fa-lg fa-facebook-official"></span>
+            Sign in with Facebook
+          </button>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </nb-layout-column>
+  <nb-layout-footer>Contact us</nb-layout-footer>
+</nb-layout>

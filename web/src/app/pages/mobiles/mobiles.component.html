@@ -1,0 +1,14 @@
+<nb-card class="page-wrapper">
+  <nb-card-header>
+    Mobiles
+    <hr>
+    <button (click)="addDevice()" nbButton size="small" fullWidth status="primary">ADD MOBILE</button>
+  </nb-card-header>
+  <nb-card-body>
+    <nb-list>
+      <nb-list-item *ngFor="let mobile of mobiles">
+        {{ mobile.mobile_no }} {{ mobile.name }}
+      </nb-list-item>
+    </nb-list>
+  </nb-card-body>
+</nb-card>

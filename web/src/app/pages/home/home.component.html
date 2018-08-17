@@ -1,0 +1,20 @@
+<nb-layout>
+  <nb-layout-header subheader>
+    <a href="#" (click)="toggle()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nb-layout-header>
+
+  <nb-sidebar>
+    <nb-user size="small" name="Jonh Cena" title="Engineer">
+    </nb-user>
+    <hr>
+    <nb-menu [items]="items">
+    </nb-menu>
+  </nb-sidebar>
+
+  <nb-layout-column>
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+  <nb-layout-footer>Contact us</nb-layout-footer>
+</nb-layout>
